@@ -1,4 +1,6 @@
-
 <?php include('header.php') ?>
-<?php include('content.php') ?>
+
+<h3>
+    Recipe idea
+</h3>
 <?php include('footer.php') ?>
