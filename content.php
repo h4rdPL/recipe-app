@@ -23,7 +23,6 @@
       <?php endif ?>
     </p>
     </div>
-
   </div>
 </div>
 </div>
