@@ -1,0 +1,28 @@
+.con {
+    height: calc(100vh - 86px);
+  }
+
+  .hero__logo {
+    height: 40%;
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    width: 40%;
+  }
+
+  .ml-1 {
+    margin-left: 20px;
+  }
+  .signIn {
+    height:calc(100vh - 86px);
+    text-align:center;
+  }
+  form {
+    text-align:left;
+  }
+  .sub {
+    justify-content:space-between;
+    align-items: center;
+  }

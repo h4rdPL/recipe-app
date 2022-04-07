@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php 
   if(isset($_GET['logout'])) {
     session_destroy();
@@ -16,12 +15,6 @@
       Twoje przepisy, Twoja kuchnia.
       Zarejestruj się już teraz!
     </h1>
-    <p>
-    <?php if(isset($_SESSION['success'])): ?>
-        <?php echo $_SESSION['success'] ?>
-        <a href="index.php?logout='1'" class="btn btn-primary"> Logout</a>
-      <?php endif ?>
-    </p>
     </div>
   </div>
 </div>
