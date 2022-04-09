@@ -47,7 +47,7 @@
             <img src="./images/avatar.png" width="35px" height="35px" alt="avatar">
             <p style="color:#fff; text-align: center; font-weight:bold;">
               <?php 
-                echo $_SESSION['username']; 
+                echo $_SESSION['email']; 
               ?>
             </p>
           </div>

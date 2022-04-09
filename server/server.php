@@ -33,7 +33,7 @@
 
     if(isset($_REQUEST['login_user'])) {
         $db = mysqli_connect('localhost', 'root', '', 'database_project');
-        $username = mysqli_query($db, "SELECT * FROM users WHERE ")
+        // $username = mysqli_query($db, "SELECT * FROM users WHERE ")
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
 
@@ -46,13 +46,13 @@
         if(count($errors) == 0) {
         // database connection variables for sql query
         $password_encrypted = md5($password);
-        $query = "SELECT * FROM users WHERE email='$email' AND password ='$password_encrypted' AND username='$username'";
+        $query = "SELECT * FROM users WHERE email='$email' AND password ='$password_encrypted';";
         $results = mysqli_query($db, $query);
-        echo $results;
+        // echo $results;
         if(mysqli_num_rows($results)==1) {
             session_start();
-            $_SESSION['username'] = $username;
-            $_SESSION['success'] = "Hello"." ".$username." You are now logged in";
+            $_SESSION['email'] = $email;
+            $_SESSION['success'] = "Hello"." ".$email." You are now logged in";
             header('location: index.php');
         } else {
             array_push($errors, "Zły login lub hasło, spróbuj ponownie");
