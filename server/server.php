@@ -15,6 +15,12 @@
         } else if(empty($password)) {
             array_push($errors, "Nie podano hasła, spróbuj ponownie");
         } 
+
+        $result = mysqli_query($db, "SELECT * FROM users WHERE email='$email'");
+        if (mysqli_num_rows($result) > 0) {
+            array_push($errors, "Konto z podanym adresem email już istnieje");
+        }
+
         if(count($errors) == 0) {
            $password_encrypted = md5($password);
             $query = "INSERT INTO users (email,username, password) VALUES('$email', '$username', '$password_encrypted');";  
@@ -23,7 +29,7 @@
             session_start();
             $_SESSION['username'] = $username;
             // $_SESSION['success'] = 'Hello'." ".$email." ".'You are registered now! now you can loging';
-            header('location: signIn.php');
+            // header('location: signIn.php');
         }
 
     }
