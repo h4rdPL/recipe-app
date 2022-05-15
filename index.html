@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/libs/reset.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>NapkinFoods</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div>
+                <!-- svg logo -->
+                <a href=""><img src="./public/img/logo 1.svg" alt="" class="nav__logo"></a>
+                <a href="#"><h1>NapkinFoods</h1></a>
+            </div>
+
+            <!-- <ul>
+                <li>
+                    <a href=""><img src="#" alt="ikona">Strona główna</a>
+                </li>
+                <li>
+                    <a href=""><img src="#" alt="ikona"></a>
+                </li>
+                <li>
+                    <a href=""><img src="#" alt="ikona">Wszystkie przepisy</a>
+                </li>
+                <li>
+                    <a href=""><img src="#" alt="ikona">Użytkownik/Logowanie/Rejestracja</a>
+                </li>
+            </ul> -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome -->
+        <div class="welcome-message">
+            <h2>Cześć, XYZ</h2>
+            <h2>Na co masz dzisiaj ochotę?</h2>
+        </div>
+
+        <!-- Carousel -->
+        <!-- <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden">---</button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel__image" src="./public/img/pexels-abhilash-sahoo-3896066.jpg" alt="pomidorowa">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="./public/img/pexels-daria-shevtsova-1333746.jpg" alt="pomidorowa">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="./public/img/pexels-ella-olsson-1640772.jpg" alt="pomidorowa">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--right">---</button>
+        </div> -->
+
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden"><img src="./public/img/arrow-left-solid.svg" alt=""></button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide card current-slide">
+                        <figure class="card__thumb carousel__image">
+                            <img src="./public/img/pexels-abhilash-sahoo-3896066.jpg" alt="pomidorowa" class="card__image">
+                            <figcaption class="card__caption">
+                                <h2 class="card__title">Nazwa</h2>
+                                <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon"> 30 min</p>
+                                <a href="" class="card__button">Czytaj więcej</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide card">
+                        <figure class="card__thumb carousel__image">
+                            <img src="./public/img/pexels-daria-shevtsova-1333746.jpg" alt="pomidorowa" class="card__image">
+                            <figcaption class="card__caption">
+                                <h2 class="card__title">Nazwa</h2>
+                                <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon"> 30 min</p>
+                                <a href="" class="card__button">Czytaj więcej</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide card">
+                        <figure class="card__thumb carousel__image">
+                            <img src="./public/img/pexels-ella-olsson-1640772.jpg" alt="pomidorowa" class="card__image">
+                            <figcaption class="card__caption">
+                                <h2 class="card__title">Nazwa</h2>
+                                <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon"> 30 min</p>
+                                <a href="" class="card__button">Czytaj więcej</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--right"><img src="./public/img/arrow-right-solid.svg" alt=""></button>
+        </div>
+
+
+        <div class="card__container">
+
+            <div class="card">
+                <figure class="card__thumb">
+                    <img src="./public/img/pexels-abhilash-sahoo-3896066.jpg" alt="pomidorowa" class="card__image">
+                    <figcaption class="card__caption">
+                        <h2 class="card__title">Nazwa</h2>
+                        <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon"> 30 min</p>
+                        <a href="" class="card__button">Czytaj więcej</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="card">
+                <figure class="card__thumb">
+                    <img src="./public/img/pexels-daria-shevtsova-1333746.jpg" alt="pomidorowa" class="card__image">
+                    <figcaption class="card__caption">
+                        <h2 class="card__title">Nazwa</h2>
+                        <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon"> 30 min</p>
+                        <a href="" class="card__button">Czytaj więcej</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="card">
+                <figure class="card__thumb">
+                    <img src="./public/img/pexels-ella-olsson-1640772.jpg" alt="pomidorowa" class="card__image">
+                    <figcaption class="card__caption">
+                        <h2 class="card__title">Nazwa</h2>
+                        <p class="card__snippet"><img src="./public/img/clock-solid 1.svg" class="card__icon">  30 min</p>
+                        <a href="" class="card__button">Czytaj więcej</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="carousel.js"></script>
+</body>
+</html>

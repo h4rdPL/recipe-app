@@ -1,0 +1,223 @@
+@font-face { 
+    font-family: ubuntu-regular; 
+    src: url('../../src/include/fonts/Ubuntu-Regular.ttf'); 
+} 
+
+@font-face { 
+    font-family: ubuntu-bold; 
+    src: url('../../src/include/fonts/Ubuntu-Bold.ttf'); 
+} 
+
+@font-face { 
+    font-family: ubuntu-medium; 
+    src: url('../../src/include/fonts/Ubuntu-Medium.ttf'); 
+} 
+
+:root {
+    --base-green: #ABD793;
+    --base-grey: #D5D5D5;
+    --dark-green: #5F693F;
+    --white: #fff;
+
+}
+
+html {
+    font-size: 16px;
+    font-family: ubuntu-regular;
+}
+
+
+
+/* ----------Header---------- */
+
+
+header {
+    background-color: var(--base-green);
+    height: 60px;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.nav__logo {
+    height: 50px;
+    width: 50px;
+}
+
+.nav h1 {
+    font-size: 32px;
+    color: var(--white);
+    text-shadow: 1px 1px 1px #000;
+    font-family: ubuntu-bold;
+}
+
+
+/* ----------Main---------- */
+
+.welcome-message {
+    margin: 30px 40px;
+}
+
+.welcome-message :first-child {
+    font-size: 20px;
+}
+
+.welcome-message :nth-child(2) {
+    font-size: 30px;
+    font-family: ubuntu-medium;
+}
+
+
+/* Cards */
+
+  .card__container {
+      display: flex;
+  }
+.card__button {
+    display: none;
+}
+  .card:hover .card__caption {
+      height: 130px;
+      opacity: 1;
+  }
+
+  .card:hover .card__button {
+    display: block;
+}
+
+  .card:hover .card__image {
+    transform: scale(1.2);
+  }
+
+  .card__thumb {
+    position: relative;
+    height: 270px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .card__caption {
+    position: absolute;
+    bottom: 5%;
+    z-index: 1;
+    padding: 0 20px;
+    color: black;
+    background-color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+    width: 90%;
+    height: 65px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  .card__title {
+      margin-top: 10px;
+      font-size: 20px;
+      text-shadow: 1px 1px 1px var(--base-green);
+
+  }
+  .card__button {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: var(--base-green);
+      text-align: center;
+      text-transform: uppercase;
+      font-family: ubuntu-medium;
+  }
+
+  .card__thumb img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+
+  .card__caption img {
+      position: relative;
+      width: 20px;
+      height: 20px;
+  }
+
+  .card__snippet {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+
+
+  /* Carousel */
+  .carousel {
+      position: relative;
+      height: 270px;
+      width: 189px;
+      margin: 0 auto;
+  }
+  
+  .carousel__track {
+      position: relative;
+      height: 100%;
+      transition: transform 250ms ease-in;
+  }
+
+  .carousel__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .carousel__track-container {
+      background: red;
+      border-radius: 20px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .carousel__slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+  }
+
+  .carousel__button {
+      position: absolute;
+      top: 50%;
+      height: 80px;
+      transform: translateY(-50%);
+      font-size: 50px;
+      background-color: white;
+      cursor: pointer;
+  }
+
+  .carousel__button img {
+      width: 30px;
+      height: 30px;
+  }
+
+  .carousel__button--left {
+      left: -50px;
+  }
+
+  .carousel__button--right {
+    right: -50px;
+}
+
+.is-hidden {
+    display: none;
+}
