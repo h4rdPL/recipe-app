@@ -1,5 +1,4 @@
 <?php include '../src/inc/header.php';?>
-
 <form action="registration.php" method="post" class="form signup-form">
         <h1>Dołącz do nas!</h1>
        
