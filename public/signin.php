@@ -1,6 +1,6 @@
 <?php include '../src/inc/header.php';?>
 
-<form action="login.php" method="post" class="form signin-form">
+<form action="register.php" method="post" class="form signin-form">
         <h1>Zaloguj się na swoje konto</h1>
        
         <div class="input-control">

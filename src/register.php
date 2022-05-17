@@ -3,7 +3,7 @@
     echo "test";
     $errors = array();
     if(isset($_REQUEST['register'])) {
-        include "./libs/db_connect.php";
+        include "../src/libs/db_connect.php";
         // ta funkcja zmienia znaki specjapne w kodzie, do użytku przez instrukcje SQL
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
