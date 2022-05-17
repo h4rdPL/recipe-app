@@ -1,5 +1,5 @@
 <?php include '../src/inc/header.php';?>
-<form action="registration.php" method="post" class="form signup-form">
+<form action="../src/registration.php" method="post" class="form signup-form">
         <h1>Dołącz do nas!</h1>
        
         <div class="input-control">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="btn-container">
-            <button type="submit">Zarejestruj się</button>
+            <button name="register"type="submit">Zarejestruj się</button>
         </div>
         <footer>Masz już konto? <a href="signin.php">Zaloguj się</a></footer>
 </form>
