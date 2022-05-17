@@ -1,6 +1,8 @@
 <?php include '../src/inc/header.php';?>
-
-<form action="register.php" method="post" class="form signin-form">
+<?php 
+require __DIR__ . '/../src/signin.php';
+?>
+<form action="signin.php" method="post" class="form signin-form">
         <h1>Zaloguj się na swoje konto</h1>
        
         <div class="input-control">
@@ -19,7 +21,7 @@
         </div>
   
         <div class="btn-container">
-            <button type="submit">Zaloguj się</button>
+            <button name="login" type="submit">Zaloguj się</button>
         </div>
         <footer>Nie masz konta? <a href="signup.php">Zarejestruj się</a></footer>
 </form>

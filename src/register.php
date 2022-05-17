@@ -1,13 +1,13 @@
-<?php 
+<?php
+    require __DIR__ . '/libs/db_connect.php'; 
     // dodanie tablicy, która będzie obsługiwała błędy
-    echo "test";
     $errors = array();
     if(isset($_REQUEST['register'])) {
         include "../src/libs/db_connect.php";
         // ta funkcja zmienia znaki specjapne w kodzie, do użytku przez instrukcje SQL
-        $email = mysqli_real_escape_string($db, $_POST['email']);
-        $password = mysqli_real_escape_string($db, $_POST['password']);
-        $password_repeat = mysqli_real_escape_string($db, $_POST['password2']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $password_repeat = mysqli_real_escape_string($conn, $_POST['password2']);
 
         // walidacja 
         if(empty($email)) {
@@ -22,8 +22,8 @@
 
         if(count($errors) == 0) {
            $password_encrypted = md5($password);
-           $query = "INSERT INTO users (email,username, password) VALUES('$email', '$username', '$password_encrypted');";  
-           mysqli_query($db, $query);
+           $query = "INSERT INTO users (email, password) VALUES('$email','$password_encrypted');";  
+           mysqli_query($conn, $query);
            header('location: signin.php');
         }
     }

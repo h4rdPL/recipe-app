@@ -1,7 +1,28 @@
+<?php session_start(); ?>
+<?php 
+if(isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['email']);
+    header('location: index.php');
+
+}
+?>
 <?php include '../src/inc/header.php';?>
 
     <div class="welcome-message">
-        <h2>Cześć, XYZ</h2>
+        <?php if(isset($_SESSION['email'])) : ?>
+
+        <h2>
+            <?php echo 'Cześć, '. $_SESSION['email']; ?>
+        </h2>
+        <a href="index.php?logout='1'">
+        Wyloguj się
+        </a>
+        <?php else : ?>
+            <h2>
+                Cześć, gość
+            </h2>
+            <?php endif ?>
         <h2>Na co masz dzisiaj ochotę?</h2>
     </div>
 
