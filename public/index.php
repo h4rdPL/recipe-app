@@ -20,10 +20,10 @@ if(isset($_GET['logout'])) {
         </a>
         <?php else : ?>
             <h2>
-                Cześć, gość
+                Cześć,
             </h2>
             <?php endif ?>
-        <h2>Na co masz dzisiaj ochotę?</h2>
+        <h2>na co masz dzisiaj ochotę?</h2>
     </div>
 
     <div class="search-bar">
