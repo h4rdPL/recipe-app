@@ -14,8 +14,8 @@
     <nav class="nav">
         <div>
             <!-- svg logo -->
-            <a href=""><img src="img/logo.svg" alt="" class="nav__logo"></a>
-            <a href="#"><h1>NapkinFoods</h1></a>
+            <a href="index.php"><img src="img/logo.svg" alt="" class="nav__logo"></a>
+            <a href="index.php"><h1>NapkinFoods</h1></a>
         </div>
 
         <div class="menu-wrap">
@@ -29,7 +29,7 @@
                     <div>
                         <ul>
                             <li class="nav-item"><a class="nav-link" href="index.php">Strona główna</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/allrecipes.php">Wszystkie przepisy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="allrecipes.php">Wszystkie przepisy</a></li>
                             <?php if(isset($_SESSION['email'])): ?>
 
                             <li class="nav-item"> <a class="nav-link" href="addrecipe.php">Dodaj przepis</a></li>

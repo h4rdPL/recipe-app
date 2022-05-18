@@ -17,7 +17,7 @@
             <div>
                 <img src="img/lock-icon.svg" alt="" srcset="">
                 <input type="password" name="password" id="password">
-            </div>
+            </div>  
         </div>
         <?php include "errors.php"?>
 
@@ -25,7 +25,7 @@
         <div class="btn-container">
             <button name="login" type="submit">Zaloguj się</button>
         </div>
-        <footer>Nie masz konta? <a href="signup.php">Zarejestruj się</a></footer>
+        <footer>Nie masz konta? <a href="register.php">Zarejestruj się</a></footer>
 </form>
 
 <?php include '../src/inc/footer.php';?>

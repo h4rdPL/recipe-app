@@ -19,7 +19,9 @@
 
     <div class="search-bar">
         <input type="text" placeholder="Znajdź przepis...">
-        <img src="img/search-icon.svg" alt="" srcset="">
+        <a href="allrecipes.php">
+            <img src="img/search-icon.svg" alt="" srcset="">
+        </a>
         
     </div>
 
@@ -33,7 +35,7 @@
                         <figcaption class="card__caption">
                             <h2 class="card__title">Nazwa</h2>
                             <p class="card__snippet"><img src="img/time-icon.svg" class="card__icon"> 30 min</p>
-                            <a href="" class="card__button">Czytaj więcej</a>
+                            <a href="singlerecipe.php" class="card__button">Czytaj więcej</a>
                         </figcaption>
                     </figure>
                 </li>
@@ -43,7 +45,7 @@
                         <figcaption class="card__caption">
                             <h2 class="card__title">Nazwa</h2>
                             <p class="card__snippet"><img src="img/time-icon.svg" class="card__icon"> 30 min</p>
-                            <a href="" class="card__button">Czytaj więcej</a>
+                            <a href="singlerecipe.php" class="card__button">Czytaj więcej</a>
                         </figcaption>
                     </figure>
                 </li>
@@ -53,7 +55,7 @@
                         <figcaption class="card__caption">
                             <h2 class="card__title">Nazwa</h2>
                             <p class="card__snippet"><img src="img/time-icon.svg" class="card__icon"> 30 min</p>
-                            <a href="" class="card__button">Czytaj więcej</a>
+                            <a href="singlerecipe.php" class="card__button">Czytaj więcej</a>
                         </figcaption>
                     </figure>
                 </li>
