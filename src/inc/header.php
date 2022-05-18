@@ -28,9 +28,17 @@
                 <div>
                     <div>
                         <ul>
-                            <li class="nav-item"><a class="nav-link" href="">Strona główna</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Wszystkie przepisy</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="">Użytkownik</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.php">Strona główna</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/allrecipes.php">Wszystkie przepisy</a></li>
+                            <?php if(isset($_SESSION['email'])): ?>
+
+                            <li class="nav-item"> <a class="nav-link" href="addrecipe.php">Dodaj przepis</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="logout.php">Wyloguj się</a></li>
+                            <?php else : ?>
+                                <li class="nav-item"> <a class="nav-link" href="register.php">Zarejestruj się</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="signin.php">Zaloguj się</a></li>
+
+                            <?php endif ?>
                         </ul>
                     </div>
                 </div>
