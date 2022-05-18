@@ -1,6 +1,6 @@
-<?php include '../src/inc/header.php';?>
 <?php 
-require __DIR__ . '/../src/signin.php';
+    require __DIR__ . '/../src/signin.php';
+    include '../src/inc/header.php';
 ?>
 <form action="signin.php" method="post" class="form signin-form">
         <h1>Zaloguj się na swoje konto</h1>
@@ -19,6 +19,8 @@ require __DIR__ . '/../src/signin.php';
                 <input type="password" name="password" id="password">
             </div>
         </div>
+        <?php include "errors.php"?>
+
   
         <div class="btn-container">
             <button name="login" type="submit">Zaloguj się</button>

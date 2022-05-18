@@ -1,8 +1,9 @@
 <?php
-require __DIR__ . '/../src/register.php';
+    require __DIR__ . '/../src/register.php';
+    include '../src/inc/header.php';
 ?>
 
-<?php include '../src/inc/header.php';?>
+<?php ?>
 <form action="register.php" method="post" class="form signup-form">
         <h1>Dołącz do nas!</h1>
        
@@ -25,14 +26,14 @@ require __DIR__ . '/../src/register.php';
             <label for="password2">Powtórz hasło</label>
             <div>
                 <img src="img/lock-icon.svg" alt="" srcset="">
-                <input type="password2" name="password2" id="password2">
+                <input type="password" name="password2" id="password2">
             </div>
         </div>
-
         <div class="checkbox-control">
             <input type="checkbox" name="agree" id="agree" value="yes"/>
             <label for="agree">Akceptuje warunki użytkowania strony</label>
         </div>
+        <?php include "errors.php" ?>
 
         <div class="btn-container">
             <button name="register" type="submit">Zarejestruj się</button>
