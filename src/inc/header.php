@@ -14,8 +14,11 @@
     <nav class="nav">
         <div>
             <!-- svg logo -->
-            <a href="index.php"><img src="img/logo.svg" alt="" class="nav__logo"></a>
-            <a href="index.php"><h1>NapkinFoods</h1></a>
+            <!-- <a href="index.php"><img src="img/logo.svg" alt="" class="nav__logo"></a>
+            <a href="index.php"><h1>NapkinFoods</h1></a> -->
+            <a href="index.php">
+                <img width="100%" src="img/test.svg" alt="">
+            </a>
         </div>
 
         <div class="menu-wrap">
