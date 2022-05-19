@@ -565,3 +565,7 @@ article .recipe-description {
 .nav div a {
   z-index: 999;
 }
+
+.input-control input {
+  width: 100%;
+}
