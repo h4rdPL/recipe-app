@@ -1,15 +1,15 @@
 <?php 
-    require __DIR__ . '/../src/signin.php';
+    require __DIR__ . '/../src/login.php';
     include '../src/inc/header.php';
 ?>
-<form action="signin.php" method="post" class="form signin-form">
+<form action="login.php" method="post" class="form login-form">
         <h1>Zaloguj się na swoje konto</h1>
        
         <div class="input-control">
-            <label for="email">Adres email</label>
+            <label for="email-username">Adres email lub nazwa użytkownika</label>
             <div>
                 <img src="img/email-icon.svg" alt="" srcset="">
-                <input type="email" name="email" id="email">
+                <input type="text" name="email-username" id="email-username">
             </div>
         </div>
         <div class="input-control">

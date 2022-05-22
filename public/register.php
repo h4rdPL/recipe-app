@@ -7,6 +7,14 @@
 <form action="register.php" method="post" class="form signup-form">
         <h1>Dołącz do nas!</h1>
        
+
+        <div class="input-control">
+            <label for="email">Nazwa użytkownika</label>
+            <div>
+                <img src="img/email-icon.svg" alt="" srcset="">
+                <input type="text" name="username" id="username">
+            </div>
+        </div>
         <div class="input-control">
             <label for="email">Adres email</label>
             <div>

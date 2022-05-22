@@ -3,10 +3,10 @@
 <?php include '../src/inc/header.php';?>
 
     <div class="welcome-message">
-        <?php if(isset($_SESSION['email'])) : ?>
+        <?php if(isset($_SESSION['username'])) : ?>
 
         <h2>
-            <?php echo 'Cześć, '. $_SESSION['email']; ?>
+             <?php echo 'Cześć, '. $_SESSION['username']; ?> 
         </h2>
 
         <?php else : ?>

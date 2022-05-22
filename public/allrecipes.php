@@ -1,8 +1,11 @@
 <?php 
-session_start();
-include '../src/inc/header.php';
+    session_start();
+    include '../src/inc/header.php';
+    require __DIR__ . '/../src/show_recipes.php';
 
-;?>
+?>
+
+?>
 
 <h1>Wszystkie przepisy</h1>
 
@@ -14,6 +17,12 @@ include '../src/inc/header.php';
 </div>
 
 <div class="recipes-list">
+
+    <?php foreach ($recipes as $recipe) {
+        printf($recipe["name"]);
+        printf($recipe["description"]);
+    } ?>
+
     <ul>
         <li class="card">
             <figure class="card__thumb">
