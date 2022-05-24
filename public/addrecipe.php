@@ -1,12 +1,16 @@
 <?php 
 
     session_start();
-    require __DIR__ . '/../src/add_recipe.php';
+    require __DIR__ . '/../src/addrecipe.php';
     include '../src/inc/header.php';
 
 ?>
 
-<form action="add_recipe.php" method="post" class="form addrecipe-form">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
+<script src="./js/app.js"></script>
+<form action="addrecipe.php" method="post" class="form addrecipe-form" enctype="multipart/form-data">
         <h1>Dodaj swój przepis</h1>
        
         <div class="input-control">
@@ -27,8 +31,6 @@
                 <option value="medium">Średni</option>
                 <option value="hard">Trudny</option>
             </select>
-          
-
         </div>
 
         <div class="input-control">
@@ -46,17 +48,18 @@
             <textarea name="recipe-description" id="recipe-description" placeholder="Opisz przepis..." cols="30" rows="10"></textarea>
         </div>
 
-        <div class="input-control">
-            <label for="recipe-photo">Zdjęcie</label>
-            <input type="file" id="recipe-photo" name="recipe-photo">
-            <button type="submit" name="recipe-photo">
-                Dodaj zdjęcie
-            </button>
+        <div>
+            Select image to upload:
+            <div class="preview"></div>
+            <input type="file" name="recipe-photo" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit" id="submit">
         </div>
 
         <div class="btn-container">
             <button name="add-recipe" type="submit">Dodaj przepis</button>
         </div>
 </form>
+
+
 
 <?php include '../src/inc/footer.php';?>

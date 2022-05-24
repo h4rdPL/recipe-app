@@ -35,7 +35,7 @@
                             <li class="nav-item"><a class="nav-link" href="allrecipes.php">Wszystkie przepisy</a></li>
 
                             <?php if(isset($_SESSION['username'])): ?>
-                                <li class="nav-item"> <a class="nav-link" href="add_recipe.php">Dodaj przepis</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="addrecipe.php">Dodaj przepis</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="logout.php">Wyloguj się</a></li>
                             <?php else : ?>
                                 <li class="nav-item"> <a class="nav-link" href="register.php">Zarejestruj się</a></li>

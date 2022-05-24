@@ -7,8 +7,10 @@
     $recipes_amount = count($recipes);
 
     echo $recipes_amount;
+
     foreach ($recipes as $recipe) {
-        printf($recipe["name"]);
+        echo $recipe["name"] . " " . $recipe["time_description"] . " " . $recipe["difficulty_type"] . " " . $recipe["description"] . "<br>";
     }
 
+    
 ?>

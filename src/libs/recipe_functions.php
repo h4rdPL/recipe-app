@@ -1,8 +1,10 @@
 <?php
-
+    
     function get_all_recipes($conn) {
 
-        $query = "SELECT * FROM recipes";
+        $query = "SELECT * FROM recipes 
+        INNER JOIN times ON recipes.time_id = times.time_id
+        INNER JOIN difficulties ON recipes.difficulty_id = difficulties.difficulty_id";
         $result = mysqli_query($conn, $query);
 
         $final_recipes = array();
@@ -14,12 +16,5 @@
         return $final_recipes;
     }
 
-    function get_recipe_time($conn) {
-        
-    }
-
-    function get_recipe_difficulty($conn) {
-        
-    }
 
 ?>

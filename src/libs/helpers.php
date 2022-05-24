@@ -9,3 +9,4 @@ function check_if_exists($value, $table, $column, $conn) {
         return true;
     }
 }
+?>

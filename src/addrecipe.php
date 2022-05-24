@@ -3,14 +3,23 @@
     require __DIR__ . '/libs/helpers.php'; 
     require __DIR__ . '/libs/validations.php'; 
 
+    
+
     if(isset($_REQUEST["add-recipe"])) {
         $recipe_name = mysqli_real_escape_string($conn, $_POST['recipe-name']);
         $recipe_preptime = mysqli_real_escape_string($conn, $_POST['recipe-preptime']);
         $recipe_difficulty = mysqli_real_escape_string($conn, $_POST['recipe-difficulty']);
         $recipe_ingredients = mysqli_real_escape_string($conn, $_POST['recipe-ingredients']);
         $recipe_description = mysqli_real_escape_string($conn, $_POST['recipe-description']);
-        $recipe_photo = mysqli_real_escape_string($conn, $_POST['recipe-photo']);
         
+        
+        $file_name = basename($_FILES["recipe-photo"]["name"]); 
+        $file_type = pathinfo($file_name, PATHINFO_EXTENSION);
+
+        $tmp_image = $_FILES['recipe-photo']['tmp_name']; 
+        $img_content = addslashes(file_get_contents($tmp_image)); 
+
+   
         if (!check_if_exists($recipe_difficulty, "difficulties", "difficulty_type", $conn)) {
 
             $difficulty_query = "INSERT INTO difficulties 
@@ -32,11 +41,13 @@
         };
 
         
-        $recipe_query = "INSERT INTO recipes (name, description, time_id, difficulty_id) 
+        $recipe_query = "INSERT INTO recipes (name, time_id, difficulty_id, description, photo) 
         VALUES (
-            '$recipe_name', '$recipe_description', (SELECT time_id FROM times WHERE time_description='$recipe_preptime'), (SELECT difficulty_id FROM difficulties WHERE difficulty_type='$recipe_difficulty')
+            '$recipe_name', (SELECT time_id FROM times WHERE time_description='$recipe_preptime'), (SELECT difficulty_id FROM difficulties WHERE difficulty_type='$recipe_difficulty'), '$recipe_description', '$img_content'
         );";
 
         mysqli_query($conn, $recipe_query);
     }
+
+
 ?>
