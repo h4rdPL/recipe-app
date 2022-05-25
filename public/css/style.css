@@ -508,7 +508,7 @@ article h1 {
 
 article div {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 
@@ -568,3 +568,4 @@ article .recipe-description {
 .input-control input {
   width: 100%;
 }
+
