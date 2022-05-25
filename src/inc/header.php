@@ -12,7 +12,9 @@
 
 <header>
 <nav class="menu">
-        <img class="menu__logo" src="img/test.svg" alt="logo">
+        <a href="index.php">
+            <img class="menu__logo" src="img/test.svg" alt="logo">
+        </a>
 
         <div id="hamburger" class="hamburger">
         <input type="checkbox" class="toggler">
