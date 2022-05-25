@@ -11,44 +11,59 @@
 <body>
 
 <header>
-    <nav class="nav">
-        <div>
-            <!-- svg logo -->
-            <!-- <a href="index.php"><img src="img/logo.svg" alt="" class="nav__logo"></a>
-            <a href="index.php"><h1>NapkinFoods</h1></a> -->
-            <a href="index.php">
-                <img width="100%" src="img/test.svg" alt="">
-            </a>
+<nav class="menu">
+        <img class="menu__logo" src="img/test.svg" alt="logo">
+
+        <div id="hamburger" class="hamburger">
+        <input type="checkbox" class="toggler">
+
+            <div class="hamburger__inner"></div>
         </div>
-
-        <div class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger">
-                <div></div>
-            </div>
-
-            <div class="menu">
-                <div>
-                    <div>
-                        <ul>
-                            <li class="nav-item"><a class="nav-link" href="index.php">Strona główna</a></li>
-                            <li class="nav-item"><a class="nav-link" href="allrecipes.php">Wszystkie przepisy</a></li>
-
-                            <?php if(isset($_SESSION['username'])): ?>
-                                <li class="nav-item"> <a class="nav-link" href="add_recipe.php">Dodaj przepis</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="account_setting.php">Ustawienia konta</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="logout.php">Wyloguj się</a></li>
-                            <?php else : ?>
-                                <li class="nav-item"> <a class="nav-link" href="register.php">Zarejestruj się</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="login.php">Zaloguj się</a></li>
-                            <?php endif ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul id="menu__list" class="menu__list">
+            <li class="menu__list__item">
+                <a href="index.php" class="menu__list__item-link">
+                    Strona główna
+                </a>
+            </li>
+            <li class="menu__list__item">
+                <a href="allrecipes.php" class="menu__list__item-link">
+                    Wszystkie przepisy
+                </a>
+            </li>
+            <?php if(isset($_SESSION['username'])): ?>
+            <li class="menu__list__item">
+                <a href="add_recipe.php" class="menu__list__item-link">
+                    Dodaj przepis
+                </a>
+            </li>
+            <li class="menu__list__item">
+                <a href="account_setting.php" class="menu__list__item-link">
+                    Ustawienia konta
+                </a>
+            </li>
+            <li class="menu__list__item">
+                <a href="logout.php" class="menu__list__item-link">
+                    Wyloguj się
+                </a>
+            </li>
+            <?php else : ?>
+            <li class="menu__list__item">
+                <a href="register.php" class="menu__list__item-link">
+                    Zarejestruj się 
+                </a>
+            </li>
+            <li class="menu__list__item">
+                <a href="login.php" class="menu__list__item-link">
+                    Zaloguj się 
+                </a>
+            </li>
+            <?php endif ?>
+        </ul>
     </nav>
 </header>
 
 <main>
     <div class="container">
+
+
+<script src="./js/menu.js"></script>
