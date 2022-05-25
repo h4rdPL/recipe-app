@@ -1,29 +1,29 @@
-<?php include '../src/inc/header.php';?>
+<?php 
+    include '../src/inc/header.php';
+    require __DIR__ . '/../src/singlerecipe.php';
 
+?>
 <article>
     <div class="recipe-image__container">
-        <img src="img/pexels-abhilash-sahoo-3896066.jpg" alt="">
+        <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($recipe_photo); ?>" alt="">
     </div>
     <div class="recipe-details">
-        <h1>Pomidorowa</h1>
+        <h1><?php echo $recipe_name ?></h1>
         
         <div class="recipe-categories">
             <div class="recipe-categories__item">
                 <img src="img/email-icon.svg" alt="">
-                <p>30 min</p>
+                <p><?php echo $recipe_time ?> min</p>
             </div>
             <div class="recipe-categories__item">
                 <img src="img/email-icon.svg" alt="">
-                <p>Łatwe</p>
+                <p><?php echo $recipe_difficulty ?></p>
             </div>
-            <div class="recipe-categories__item">
-                <img src="img/email-icon.svg" alt="">
-                <p>Zupa</p>
-            </div>
+            
         </div>
 
         <div class="recipe-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequuntur, molestiae blanditiis cumque iure rerum saepe tempore exercitationem expedita. Magni cupiditate incidunt dolorum nobis cum quia repellendus molestias est veniam.
+            <?php echo $recipe_description ?>
         </div>
     </div>
 </article>

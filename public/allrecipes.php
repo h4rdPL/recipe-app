@@ -17,7 +17,8 @@
 
 <div class="recipes-list">
     <ul>
-    <?php foreach ($recipes as $recipe):    
+    <?php foreach ($recipes as $recipe): 
+        $recipe_id = $recipe['recipe_id'];   
         $recipe_name = $recipe["name"];
         $recipe_time = $recipe["time_description"];
         $recipe_photo = $recipe["photo"];
@@ -29,7 +30,7 @@
                 <figcaption class="card__caption">
                     <h2 class="card__title"><?php echo $recipe_name ?></h2>
                     <p class="card__snippet"><img src="img/time-icon.svg" class="card__icon"><?php echo $recipe_time ?> min</p>
-                    <a href="singlerecipe.php" class="card__button">Czytaj więcej</a>
+                    <a href="singlerecipe.php?id=<?php echo $recipe_id ?> " class="card__button">Czytaj więcej</a>
                 </figcaption>
             </figure>
         </li> 

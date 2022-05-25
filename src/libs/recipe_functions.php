@@ -16,5 +16,16 @@
         return $final_recipes;
     }
 
+    // function get_recipe_details($conn, $recipe_id) {
+    //     $recipes = get_all_recipes($conn);
 
+        
+
+    //     foreach ($recipes as $recipe) {
+    //         $recipe_id = $recipe['recipe_id'];   
+    //         $recipe_name = $recipe["name"];
+    //         $recipe_time = $recipe["time_description"];
+    //         $recipe_photo = $recipe["photo"];
+    //     }
+    // }
 ?>
