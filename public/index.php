@@ -2,6 +2,8 @@
     session_start(); 
     include '../src/inc/header.php';
     require __DIR__ . '/../src/showrecipes.php';
+ 
+
 ?>
 
     <div class="welcome-message">
@@ -19,14 +21,15 @@
 
         <h2>na co masz dzisiaj ochotę?</h2>
     </div>
-
-    <div class="search-bar">
-        <input type="text" placeholder="Znajdź przepis...">
-        <a href="allrecipes.php">
-            <img src="img/search-icon.svg" alt="" srcset="">
-        </a>
-    </div>
-            
+    
+    <form action="search.php" method="POST"> 
+        <div class="search-bar">
+            <input type="text" name="search-index" placeholder="Znajdź przepis...">
+            <button type="submit" name="send" href="allrecipes.php" >
+                <img src="img/search-icon.svg" alt="" srcset="">
+            </button>
+        </div>
+    </form>
     <div class="carousel">
         <button class="carousel__button carousel__button--left is-hidden"><img src="img/arrow-left-solid.svg" alt=""></button>
         <div class="carousel__track-container">

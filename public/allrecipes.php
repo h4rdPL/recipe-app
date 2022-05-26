@@ -3,28 +3,33 @@
     require __DIR__ . '/../src/inc/header.php';
     require __DIR__ . '/../src/showrecipes.php';
     require __DIR__ . '/../src/libs/db_connect.php';
+    require __DIR__ . '/../src/libs/filter.php';
 ?>
 
 
 <h1>Wszystkie przepisy</h1>
+<form action="" method="GET">
 
-<div class="search-bar">
-        <input type="text" placeholder="Znajdź przepis...">
-        <a href="allrecipes.php">
-            <img src="img/search-icon.svg" alt="" srcset="">
-        </a>
-</div>
+    <div class="search-bar">
+
+            <input name="search" type="text" value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" placeholder="Znajdź przepis...">
+            <button type="submit" href="allrecipes.php">
+                <img src="img/search-icon.svg" alt="" srcset="">
+            </button>
+    </div>
+</form>
 
 <div class="recipes-list">
     <ul>
-    <?php foreach ($limited_recipes as $recipe): 
+
+    <?php foreach ($final_recipes as $recipe): 
         $recipe_id = $recipe['recipe_id'];   
         $recipe_name = $recipe["name"];
         $recipe_time = $recipe["time_description"];
         $recipe_photo = $recipe["photo"];
     ?>
-
-        <li class="card">
+     
+            <li class="card">
             <figure class="card__thumb">
                 <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($recipe_photo); ?>" alt="pomidorowa" class="card__image">
                 <figcaption class="card__caption">
