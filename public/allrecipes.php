@@ -2,7 +2,7 @@
     session_start();
     require __DIR__ . '/../src/inc/header.php';
     require __DIR__ . '/../src/showrecipes.php';
-
+    require __DIR__ . '/../src/libs/db_connect.php';
 ?>
 
 
@@ -17,7 +17,7 @@
 
 <div class="recipes-list">
     <ul>
-    <?php foreach ($recipes as $recipe): 
+    <?php foreach ($limited_recipes as $recipe): 
         $recipe_id = $recipe['recipe_id'];   
         $recipe_name = $recipe["name"];
         $recipe_time = $recipe["time_description"];
@@ -35,7 +35,23 @@
             </figure>
         </li> 
     <?php endforeach; ?>
+
     </ul>
+    
+    <ul class="pagination" style="justify-content:center;">
+
+        <?php for($page = 1; $page <= $number_of_pages; $page++): 
+            
+            $active = ($current_page == $page) ? "pagination__link-active" : " ";
+        ?>  
+                <a class="pagination__link__item" href="allrecipes.php?page=<?php echo $page; ?>">
+                    <li class="pagination__link <?php echo $active; ?>">
+                        <?php echo $page ?>
+                    </li>  
+                </a>
+        <?php endfor; ?>
+    </ul>
+    
 </div>
 
 <?php include '../src/inc/footer.php';?>

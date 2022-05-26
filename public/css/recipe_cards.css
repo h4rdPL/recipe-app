@@ -1,0 +1,82 @@
+
+/* Cards */
+
+.card__container {
+    display: flex;
+}
+.card__button {
+  display: none;
+}
+.card:hover .card__caption {
+    height: 120px;
+    opacity: 1;
+}
+
+.card:hover .card__button {
+  display: block;
+}
+
+.card:hover .card__image {
+  transform: scale(1.2);
+}
+
+.card__thumb {
+  position: relative;
+  height: 270px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card__caption {
+  position: absolute;
+  bottom: 5%;
+  /* z-index: 1; */
+  padding: 0 18px;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+  width: 90%;
+  height: 65px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.card__title {
+    margin-top: 10px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px var(--base-green);
+
+}
+.card__button {
+    margin-top: 15px;
+    padding: 8px 4px;
+    border-radius: 20px;
+    background-color: var(--base-green);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: ubuntu-medium;
+}
+
+.card__thumb img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.card__caption img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.card__snippet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

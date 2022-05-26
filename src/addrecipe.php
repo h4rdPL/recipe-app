@@ -3,14 +3,16 @@
     require __DIR__ . '/libs/helpers.php'; 
     require __DIR__ . '/libs/validations.php'; 
 
-    
 
     if(isset($_REQUEST["add-recipe"])) {
+        
+        print_r($_POST);
+
         $recipe_name = mysqli_real_escape_string($conn, $_POST['recipe-name']);
         $recipe_preptime = mysqli_real_escape_string($conn, $_POST['recipe-preptime']);
         $recipe_difficulty = mysqli_real_escape_string($conn, $_POST['recipe-difficulty']);
-        $recipe_ingredients = mysqli_real_escape_string($conn, $_POST['recipe-ingredients']);
         $recipe_description = mysqli_real_escape_string($conn, $_POST['recipe-description']);
+        $ingredient_name = mysqli_real_escape_string($conn, $_POST['ingredient-name']);
         
         
         $file_name = basename($_FILES["recipe-photo"]["name"]); 
@@ -48,6 +50,5 @@
 
         mysqli_query($conn, $recipe_query);
     }
-
 
 ?>
